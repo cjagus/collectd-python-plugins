@@ -22,7 +22,7 @@ def read(data=None):
     collectd.Values(
         plugin='aws_spot.' + az + '.' + instance_type, type='gauge', type_instance='status'
     ).dispatch(
-        values=[spot_termination]
+        values=[termination_notice]
     )
 
 collectd.register_read(read)
